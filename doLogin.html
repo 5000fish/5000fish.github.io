@@ -1,0 +1,332 @@
+Post DoLogin
+URL: /api/Login/DoLogin
+
+**Description**
+Initiate a login session with Yurbi.
+
+**Method**: POST
+
+**Data Params**
+
+    {
+    bForceLogin: [bool],
+    isGuest: [bool],
+    UserId: [string],
+    UserPassword: [string]
+    }
+
+ 
+**Example**
+
+    {
+    bForceLogin: true,
+    isGuest: false,
+    UserId: "admin",
+    UserPassword: "yurbi"
+    }
+
+ 
+**Success Response**
+Code: 200
+The login response JSON object contain may pieces of information, but the primary useful information is contain in the LoginSession and LoginUser properties.
+
+    {  
+       "ErrorCode":0,
+       "ErrorMessage":"",
+       "LicensePortalAddress":"http://support.yurbi.com/",
+       "LoginSession":{  
+          "ErrorCode":0,
+          "ErrorMessage":"",
+          "SessionFlag":0,
+          "SessionTimeLeft":0,
+          "SessionToken":"GLYBPSYRSMQQIAHCCNZCVLP[U",
+          "isGuestSession":false
+       },
+       "LoginUser":{  
+          "AllApplications":[  
+          ],
+          "AllGroups":[  
+          ],
+          "AllRoles":[  
+          ],
+          "ApplicationConstraints":null,
+          "AuthType":"PIN",
+          "ComboName":"Admin, Yurbi",
+          "CreateDate":"2011-10-13T14:47:50",
+          "Description":"Builtin Yurbi Admin account",
+          "EmailAddress":"",
+          "ErrorCode":0,
+          "ErrorMessage":"",
+          "FirstName":"Yurbi",
+          "FullName":"Yurbi Admin",
+          "ID":"1",
+          "LastName":"Admin",
+          "LoginDate":"2016-05-17T21:13:46",
+          "LoginName":"admin",
+          "ModifyDate":"2016-03-23T08:38:15",
+          "Pin":"",
+          "Preferences":[  
+          ],
+          "SecurityGroups":[  
+             {  
+                "AllRoles":[  
+                ],
+                "AllUsers":[  
+                ],
+                "ErrorCode":0,
+                "ErrorMessage":"",
+                "GroupCreated":"2011-10-13T14:47:51",
+                "GroupDescription":"Yurbi Admins",
+                "GroupId":"1",
+                "GroupModified":"2011-10-13T14:47:51",
+                "GroupName":"Administrators",
+                "GroupRoles":[  
+                   {  
+                      "ErrorCode":0,
+                      "ErrorMessage":"",
+                      "RoleCreated":"2009-06-29T00:00:00",
+                      "RoleDescription":"Full access to resources assigned to this group",
+                      "RoleId":"1",
+                      "RoleModified":"2009-06-29T00:00:00",
+                      "RoleName":"Admin"
+                   }
+                ],
+                "GroupStatus":0,
+                "Membership":[  
+                ]
+             },
+             {  
+                "AllRoles":[  
+                ],
+                "AllUsers":[  
+                ],
+                "ErrorCode":0,
+                "ErrorMessage":"",
+                "GroupCreated":"2011-10-13T14:47:51",
+                "GroupDescription":"Yurbi Anonymous Objects",
+                "GroupId":"2",
+                "GroupModified":"2011-10-13T14:47:51",
+                "GroupName":"Anonymous",
+                "GroupRoles":[  
+                   {  
+                      "ErrorCode":0,
+                      "ErrorMessage":"",
+                      "RoleCreated":"2009-06-29T00:00:00",
+                      "RoleDescription":"Read-Only access to resources within this group",
+                      "RoleId":"2",
+                      "RoleModified":"2009-06-29T00:00:00",
+                      "RoleName":"View"
+                   }
+                ],
+                "GroupStatus":0,
+                "Membership":[  
+                ]
+             },
+             {  
+                "AllRoles":[  
+                ],
+                "AllUsers":[  
+                ],
+                "ErrorCode":0,
+                "ErrorMessage":"",
+                "GroupCreated":"2011-10-13T14:47:51",
+                "GroupDescription":"All Users",
+                "GroupId":"0",
+                "GroupModified":"2011-10-13T14:47:51",
+                "GroupName":"AllUsers",
+                "GroupRoles":[  
+                   {  
+                      "ErrorCode":0,
+                      "ErrorMessage":"",
+                      "RoleCreated":"2009-06-29T00:00:00",
+                      "RoleDescription":"Full access to resources assigned to this group",
+                      "RoleId":"1",
+                      "RoleModified":"2009-06-29T00:00:00",
+                      "RoleName":"Admin"
+                   }
+                ],
+                "GroupStatus":0,
+                "Membership":[  
+                ]
+             }
+          ],
+          "UserApplications":[  
+             {  
+                "ApplicationID":"11",
+                "ApplicationName":"CA® Service Desk r12 ITIL",
+                "ApplicationRoleID":"7",
+                "ApplicationRoleName":"Architect",
+                "ApplicationRoleType":"0"
+             },
+             {  
+                "ApplicationID":"50",
+                "ApplicationName":"Remedy® ITSM 7.6",
+                "ApplicationRoleID":"7",
+                "ApplicationRoleName":"Architect",
+                "ApplicationRoleType":"0"
+             },
+             {  
+                "ApplicationID":"1015",
+                "ApplicationName":"AdventureWorks",
+                "ApplicationRoleID":"7",
+                "ApplicationRoleName":"Architect",
+                "ApplicationRoleType":"0"
+             }
+          ],
+          "UserState":0,
+          "isAdmin":true,
+          "isAgent":true,
+          "isArchitect":true,
+          "isBuilder":false,
+          "isFirstRun":false,
+          "isSuperAdmin":true
+       },
+       "Passport":null,
+       "RealmList":[  
+          {  
+             "ErrorCode":0,
+             "ErrorMessage":"",
+             "ProviderList":[  
+             ],
+             "RealmCreated":"2009-06-29T00:00:00",
+             "RealmDescription":"This is a default realm. Cannot be edited.",
+             "RealmId":"1",
+             "RealmModified":"2009-06-29T00:00:00",
+             "RealmName":"MASTER",
+             "SMTPSetting":{  
+                "ErrorCode":0,
+                "ErrorMessage":null,
+                "SMTPCreated":null,
+                "SMTPEnableSSL":null,
+                "SMTPFromAddress":null,
+                "SMTPHost":null,
+                "SMTPId":null,
+                "SMTPModified":null,
+                "SMTPPassword":null,
+                "SMTPPort":null,
+                "SMTPRealm":null,
+                "SMTPRequiredSecurity":null,
+                "SMTPUserName":null
+             }
+          }
+       ],
+       "isPassportExpiredBase":false,
+       "isPassportFirstRun":false
+    }
+
+
+
+Definition of LoginSession
+
+**Name**
+**Description**
+**Type**
+ErrorCode
+Error code number
+integer
+ErrorMessage
+Associated error message for error code
+string
+isGuestSession
+True/False is the login session a guest session.
+bool
+SessionFlag
+TBD
+integer
+SesstionTimeLeft
+TBD
+integer
+SessionToken
+Session Token which must be based to all API calls.
+string
+
+###  
+### Definition of LoginUser
+**Name**
+**Description**
+**Type**
+ComboName
+Lastname, Firstname
+string
+CreateDate
+Contact record create date
+date
+Description 
+Contact record description
+string
+EmailAddress
+User’s Email Address
+string
+FirstName
+User’s first name.
+string
+FullName
+FirstName, LastName
+string
+ID
+User record id.
+integer
+isAdmin
+Does the user have Admin access - used only to setup UI.
+bool
+isAgent
+Does the user have Agent access - used only to setup UI.
+bool
+isArchitect
+Does the user have Architect access - used only to setup UI.
+bool
+isBuilder
+Does the user have Builder access - used only to setup UI.
+bool
+isFirstRun
+If First run is true, then we need to activate Yurbi.
+bool
+isSuperAdmin
+Only true if using builtin Admin account, UI setup only.
+bool
+LastName
+User’s last name.
+string
+ModifyDate
+User record last modify date
+date
+PIN
+This is never returned from the server will be blank
+string
+Preferences
+User preferences TBD
+object
+
+
+
+
+**Sample Call**
+
+    $.ajax({
+      url: "/api/login/DoLogin",
+      dataType: "json",
+        data : {
+        bolForceLogin: true,
+        UserId: "Admin",
+        UserPassword: "yurbi",
+        isGuest: false},
+      type : "POST",
+      success : function(r) {
+       //this does not mean valid login, only the call completed successfully
+       if (r.Errorcode == 0) {
+         // login success
+       } else {
+         // login error display message
+         console.log(r.ErrorMessage);
+       }
+        console.log(r);
+      },
+      error: function(r, ajaxOptiosn, thrownError) {
+      //severe error occured, service many not be available
+        console.log(thrownError)
+      }
+    });
+
+ 
+
+
